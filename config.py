@@ -8,17 +8,17 @@ from typing import List
 
 
 # ─── Bot Credentials ─────────────────────────────────────────────────────────
-API_ID: int = int(environ.get("API_ID", "0"))
-API_HASH: str = environ.get("API_HASH", "")
+API_ID: int = int(environ.get("API_ID", "20400973"))
+API_HASH: str = environ.get("API_HASH", "047838cb76d54bc445e155a7cab44664")
 BOT_TOKEN: str = environ.get("BOT_TOKEN", "")
 BOT_USERNAME: str = environ.get("BOT_USERNAME", "")  # Without @, e.g. MyReferralBot
 
 # ─── Database ─────────────────────────────────────────────────────────────────
-DATABASE_URI: str = environ.get("DATABASE_URI", "mongodb://localhost:27017")
-DATABASE_NAME: str = environ.get("DATABASE_NAME", "referral_bot")
+DATABASE_URI: str = environ.get("DATABASE_URI", "mongodb+srv://amalabraham989:seriesfactory@sfactory.a7gq1.mongodb.net/?retryWrites=true&w=majority&appName=sfactory")
+DATABASE_NAME: str = environ.get("DATABASE_NAME", "sfactory")
 
 # ─── Admin Settings ───────────────────────────────────────────────────────────
-_admins_raw = environ.get("ADMINS", "")
+_admins_raw = environ.get("ADMINS", "5677517133")
 ADMINS: List[int] = [
     int(a.strip()) for a in _admins_raw.split() if a.strip().isdigit()
 ]
@@ -36,7 +36,7 @@ MAX_POINTS_PER_REFERRAL: float = float(environ.get("MAX_POINTS_PER_REFERRAL", "1
 
 # ─── Anti-Abuse Settings ─────────────────────────────────────────────────────
 # Maximum referrals per hour to detect suspicious activity
-MAX_REFERRALS_PER_HOUR: int = int(environ.get("MAX_REFERRALS_PER_HOUR", "30"))
+MAX_REFERRALS_PER_HOUR: int = int(environ.get("MAX_REFERRALS_PER_HOUR", "50"))
 # Minimum account age in days to be counted (0 = disabled)
 MIN_ACCOUNT_AGE_DAYS: int = int(environ.get("MIN_ACCOUNT_AGE_DAYS", "0"))
 
