@@ -1,0 +1,18 @@
+# Referral Reward Bot — Python Dependencies
+# Python 3.10+ required
+
+# Telegram Bot Framework
+aiogram==3.7.0
+
+# MongoDB Async Driver
+motor==3.4.0
+pymongo==4.7.2
+
+# Environment variable support
+python-dotenv==1.0.1
+
+# Async utilities
+aiohttp==3.9.5
+
+# Logging extras (optional but useful in production)
+colorlog==6.8.2
