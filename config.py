@@ -25,7 +25,7 @@ ADMINS: List[int] = [
 
 # ─── Required Channels (stored in DB, but initial seed from env) ──────────────
 # Comma-separated list of channel IDs, e.g. "-1001234567890,-1009876543210"
-_channels_raw = environ.get("REQUIRED_CHANNELS", "")
+_channels_raw = environ.get("REQUIRED_CHANNELS", "-1002028603218")
 INITIAL_REQUIRED_CHANNELS: List[int] = [
     int(c.strip()) for c in _channels_raw.split(",") if c.strip().lstrip("-").isdigit()
 ]
@@ -41,7 +41,7 @@ MAX_REFERRALS_PER_HOUR: int = int(environ.get("MAX_REFERRALS_PER_HOUR", "50"))
 MIN_ACCOUNT_AGE_DAYS: int = int(environ.get("MIN_ACCOUNT_AGE_DAYS", "0"))
 
 # ─── Logging ─────────────────────────────────────────────────────────────────
-LOG_CHANNEL: int = int(environ.get("LOG_CHANNEL", "0")) if environ.get("LOG_CHANNEL", "0").lstrip("-").isdigit() else 0
+LOG_CHANNEL: int = int(environ.get("LOG_CHANNEL", "-1002028603218")) if environ.get("LOG_CHANNEL", "0").lstrip("-").isdigit() else 0
 LOG_LEVEL: str = environ.get("LOG_LEVEL", "INFO")
 
 # ─── FSM State TTL (seconds) ─────────────────────────────────────────────────
