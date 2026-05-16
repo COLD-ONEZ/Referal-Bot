@@ -10,8 +10,8 @@ from typing import List
 # ─── Bot Credentials ─────────────────────────────────────────────────────────
 API_ID: int = int(environ.get("API_ID", "20400973"))
 API_HASH: str = environ.get("API_HASH", "047838cb76d54bc445e155a7cab44664")
-BOT_TOKEN: str = environ.get("BOT_TOKEN", "")
-BOT_USERNAME: str = environ.get("BOT_USERNAME", "")  # Without @, e.g. MyReferralBot
+BOT_TOKEN: str = environ.get("BOT_TOKEN", "8991082716:AAFcSp7o_9H6RvWOiVEXuqBOIXuwRAKGoLY")
+BOT_USERNAME: str = environ.get("BOT_USERNAME", "SF_ReferalBoT")  # Without @, e.g. MyReferralBot
 
 # ─── Database ─────────────────────────────────────────────────────────────────
 DATABASE_URI: str = environ.get("DATABASE_URI", "mongodb+srv://amalabraham989:seriesfactory@sfactory.a7gq1.mongodb.net/?retryWrites=true&w=majority&appName=sfactory")
